@@ -42,3 +42,52 @@ Nilai baru dari judul, tahun terbit, dan penerbit diambil dari input pengguna da
 **Delete Data**
 
 Fungsi ini digunakan untuk menghapus data buku berdasarkan ISBN. Setelah berhasil, koneksi akan di-commit dan ditutup. Ini merupakan fungsi yang dijalankan ketika tombol "Delete" ditekan untuk menghapus data buku dari database PostgreSQL. Pertama, ISBN divalidasi untuk memastikan tidak kosong. Jika kosong, pesan peringatan muncul menggunakan JOptionPane. Query SQL untuk menghapus data buku berdasarkan ISBN disiapkan. Jika berhasil, data buku dihapus, dan input form di-reset. Setelah proses selesai, koneksi ke database ditutup dan tampilan data diperbarui.
+
+**Langkah - Langkah**
+
+1. Menghubungkan Netbeans dengan database yakni menambahkan libraries postgreSql.jar untuk eksekusi
+![image](https://github.com/user-attachments/assets/445d02ab-5898-45ae-8ea5-f10928a702fa)
+
+
+2. Membuat  class untuk koneksi netbeans dengan database terkait, berikut source codenya :
+   ![image](https://github.com/user-attachments/assets/260a531b-86c9-4098-b18d-cfd6bb6ee273)
+
+   
+3. Membuat class JFrameForm dan menyesuaikan tampilannya
+   ![image](https://github.com/user-attachments/assets/6fe6286f-624f-4703-84c0-79cf269ff74c)
+
+   
+4. Membuat perintah untuk insert button, berikut source codenya :
+   ![image](https://github.com/user-attachments/assets/0a0b647a-1d36-43e7-9103-eff400c71782)
+
+   
+5. Membuat perintah untuk update button, berikut source codenya :
+   ![image](https://github.com/user-attachments/assets/f0ac0602-83a7-4b25-addd-6b54f7c6b348)
+
+   
+6. Membuat perintah untuk delete button, berikut source codenya :
+   ![image](https://github.com/user-attachments/assets/c6382f06-eeba-4858-8f02-d5eb5052d34d)
+
+
+7. Membuat perintah untuk clear button, berikut source codenya :
+   ![image](https://github.com/user-attachments/assets/fa31281f-53c1-4536-b2b8-527a7f2d15e4)
+
+
+8. Terdapat perintah untuk tabel, yakni "tblmouseclicked" untuk interaksi terhadap tabel agar dapat dibaca oleh text field
+   ![image](https://github.com/user-attachments/assets/f104c82e-4e95-4a96-a984-bba1051ea656)
+
+
+9. Jalankan classnya untuk mendapat hasilnya
+    ![image](https://github.com/user-attachments/assets/3b915b2c-f1b9-4e47-8435-75bac2eeb432)
+
+
+Demikian materi ini disampaikan. Semoga penjelasan diatas dapat membantu memahami materi simulasi UTS mata kuliah Pemrograman Berorientasi Objek ini.
+
+
+
+
+
+
+
+
+
