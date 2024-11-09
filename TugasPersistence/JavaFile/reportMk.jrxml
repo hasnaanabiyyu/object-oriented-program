@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8ada9b23-d616-4653-bbac-512a3829075f">
+	<property name="ireport.zoom" value="3.79749833583243"/>
+	<property name="ireport.x" value="363"/>
+	<property name="ireport.y" value="36"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM mata_kuliah;]]>
+	</queryString>
+	<field name="kodemk" class="java.lang.String"/>
+	<field name="sks" class="java.lang.Integer"/>
+	<field name="namamk" class="java.lang.String"/>
+	<field name="semesterajar" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="100" y="13" width="378" height="33" uuid="b95adcc6-53bb-4f8f-938c-da935945a257"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mata Kuliah Sistem Informasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="124" y="46" width="327" height="22" uuid="73820dc4-4862-4e9b-8d61-8af95c5d0198"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Universitas Islam Negeri Sunan Ampel Surabaya]]></text>
+			</staticText>
+			<image>
+				<reportElement x="4" y="2" width="83" height="66" uuid="a7c0c4b3-e3d8-43b2-9e6f-8b1a0010171e"/>
+				<imageExpression><![CDATA["C:\\Users\\M. HASNAN AL ABIYYU\\Downloads\\uinsa.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="491" y="2" width="61" height="55" uuid="4747bc0a-87ae-4013-bfdc-aa9fc10d9ca7"/>
+				<imageExpression><![CDATA["C:\\Users\\M. HASNAN AL ABIYYU\\Downloads\\siii.jpeg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="100" y="2" width="197" height="20" uuid="ef328c61-ef87-40a8-b82d-6f15e5fa8f9a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="642d1dc2-92a1-48ea-b926-b5fe32deb9c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="15" width="138" height="20" uuid="fa05925c-fb71-4162-8a02-2c1415edc162"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="15" width="138" height="20" uuid="60c41695-fef3-4863-8ace-0e653b2aeb68"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="15" width="138" height="20" uuid="85a861cf-a3e8-4da8-90fd-011c4d78270f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="414" y="15" width="138" height="20" uuid="8185bd82-0aa7-4629-a76e-1a6345fc8a3a"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Column header" x="4" y="19" width="138" height="15" uuid="9a21c383-7edc-4bac-924c-319f78a6edfe"/>
+				<text><![CDATA[Kode Mata Kuliah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="142" y="19" width="138" height="15" uuid="9995c6b9-d163-4235-9f85-57f08d206cd3"/>
+				<text><![CDATA[SKS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="280" y="19" width="138" height="15" uuid="4a428510-a3a8-4d12-a47d-f9a6dd417e75"/>
+				<text><![CDATA[Nama Mata Kuliah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="418" y="19" width="138" height="15" uuid="26fb759f-2d02-4f49-b44c-fed9c4155b80"/>
+				<text><![CDATA[Semester]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="f764ba6d-5a1a-4748-bd5d-8374a8b3c56d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="0" width="138" height="20" uuid="c5bf3485-e653-406f-81bd-3a5f9fedfb01"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="276" y="0" width="138" height="20" uuid="192c5bf7-3f80-4354-8340-40ae0f549020"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="414" y="0" width="138" height="20" uuid="09d7af1f-527e-44d5-a6b4-066f8784554f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="138" y="0" width="138" height="20" uuid="e4c1578a-c7a5-4d4b-aa2e-94b924e63ee8"/>
+			</rectangle>
+			<textField>
+				<reportElement style="Detail" x="4" y="1" width="138" height="15" uuid="ab4a411d-55ba-4244-a352-2a6c20d88f7b"/>
+				<textFieldExpression><![CDATA[$F{kodemk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="142" y="1" width="138" height="15" uuid="b6551264-e323-4cba-adea-65942b27cdea"/>
+				<textFieldExpression><![CDATA[$F{sks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="280" y="1" width="138" height="15" uuid="ac22d255-2120-4e6b-83c7-60d01e728fde"/>
+				<textFieldExpression><![CDATA[$F{namamk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="418" y="1" width="138" height="15" uuid="4085ca66-1ad7-49a4-8fb9-0fc1eca8032a"/>
+				<textFieldExpression><![CDATA[$F{semesterajar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="78d43ea5-aef6-4779-9519-dafd97682e8a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="8ab010f7-31db-471f-b25b-9d3301907e9e"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="f4538e0f-c562-40b3-bfa2-ae6880bf88ec"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
