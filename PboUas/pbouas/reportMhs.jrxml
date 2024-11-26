@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8ada9b23-d616-4653-bbac-512a3829075f">
+	<property name="ireport.zoom" value="1.3310000000000064"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString>
+		<![CDATA[SELECT * FROM mahasiswa;]]>
+	</queryString>
+	<field name="nim" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="alamat" class="java.lang.String"/>
+	<field name="asalSma" class="java.lang.String"/>
+	<field name="NamaOrtu" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="87" y="13" width="393" height="33" uuid="b95adcc6-53bb-4f8f-938c-da935945a257"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Mahasiswa Sistem Informasi 23]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="124" y="46" width="327" height="22" uuid="73820dc4-4862-4e9b-8d61-8af95c5d0198"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Universitas Islam Negeri Sunan Ampel Surabaya]]></text>
+			</staticText>
+			<image>
+				<reportElement x="4" y="2" width="83" height="66" uuid="a7c0c4b3-e3d8-43b2-9e6f-8b1a0010171e"/>
+				<imageExpression><![CDATA["C:\\Users\\M. HASNAN AL ABIYYU\\Downloads\\uinsa.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="491" y="2" width="61" height="55" uuid="4747bc0a-87ae-4013-bfdc-aa9fc10d9ca7"/>
+				<imageExpression><![CDATA["C:\\Users\\M. HASNAN AL ABIYYU\\Downloads\\siii.jpeg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="100" y="2" width="197" height="20" uuid="ef328c61-ef87-40a8-b82d-6f15e5fa8f9a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="642d1dc2-92a1-48ea-b926-b5fe32deb9c8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="15" width="112" height="20" uuid="fa05925c-fb71-4162-8a02-2c1415edc162"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Column header" x="4" y="20" width="108" height="15" uuid="9a21c383-7edc-4bac-924c-319f78a6edfe"/>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="112" y="15" width="112" height="20" uuid="9a239e7e-05f4-4651-b359-8a0cc1ab0ed8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="224" y="15" width="112" height="20" uuid="058269d5-99e1-413b-bbde-d3e60901ff46"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="336" y="15" width="112" height="20" uuid="e0719503-adbe-41bd-a705-7c111257bb35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="448" y="15" width="112" height="20" uuid="eefd64a9-1c84-4e0b-878d-673017803138"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Column header" x="112" y="20" width="108" height="15" uuid="4c988403-c1f7-4957-92a0-ccd8fd50defe"/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="224" y="20" width="108" height="15" uuid="f711eaa0-57c9-4a26-a21e-fe220405abbc"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="337" y="20" width="108" height="15" uuid="bb01e0e6-f816-4633-9c7a-3e50e5d49441"/>
+				<text><![CDATA[Asal SMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="451" y="20" width="108" height="15" uuid="aeec0164-ea59-4a2c-9728-202fff8305e1"/>
+				<text><![CDATA[Nama Wali]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="f764ba6d-5a1a-4748-bd5d-8374a8b3c56d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<rectangle>
+				<reportElement x="0" y="0" width="112" height="20" uuid="c5bf3485-e653-406f-81bd-3a5f9fedfb01"/>
+			</rectangle>
+			<textField>
+				<reportElement style="Detail" x="4" y="1" width="96" height="15" uuid="ab4a411d-55ba-4244-a352-2a6c20d88f7b"/>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="112" y="0" width="112" height="20" uuid="902639a8-34a5-4c5e-8ac7-6483531ebd29"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="224" y="0" width="112" height="20" uuid="0b7fa293-8750-4a8d-a276-ba961a018c79"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="336" y="0" width="112" height="20" uuid="c1df54bd-2476-44f3-9415-98ef16293934"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="448" y="0" width="112" height="20" uuid="a05055ff-0707-4354-9ece-da627ffe5e94"/>
+			</rectangle>
+			<textField>
+				<reportElement style="Detail" x="224" y="1" width="96" height="15" uuid="15883a07-968e-4f0a-8d76-3b10211185ed"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="112" y="1" width="96" height="15" uuid="bfa0bada-d85f-4bf6-8f38-dcf2094e019e"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="337" y="1" width="96" height="15" uuid="4dccb742-3e7f-4783-b9ee-662fb875dbfc"/>
+				<textFieldExpression><![CDATA[$F{asalSma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="451" y="1" width="96" height="15" uuid="4de5584c-02e0-4ba6-9045-a435886746db"/>
+				<textFieldExpression><![CDATA[$F{NamaOrtu}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="78d43ea5-aef6-4779-9519-dafd97682e8a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="8ab010f7-31db-471f-b25b-9d3301907e9e"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="f4538e0f-c562-40b3-bfa2-ae6880bf88ec"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
